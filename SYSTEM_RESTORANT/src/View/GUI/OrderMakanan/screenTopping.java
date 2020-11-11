@@ -143,7 +143,7 @@ public class screenTopping {
         
         frame.setLayout(null);
         frame.setVisible(true);
-    } 
+    }
 
     private Image resizeImage(String url) throws IOException {
         Image dimg = null;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View.GUIMenu;
+package View.GUI.Menu;
 
 
 import Model.Order;
@@ -29,7 +29,7 @@ public class Screen {
         JFrame frame = new JFrame("Menu Restorant");
         frame.setSize(500, 700);
         frame.setLocationRelativeTo(null);
-
+    
         
         frame.setLayout(null);
         frame.setVisible(true);
@@ -48,12 +48,19 @@ public class Screen {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new screenCustomer();
-            }
+}
         });
           frame.add(customers);
         
         cashier = new JButton("Cashier");
         cashier.setBounds(179, 140, 100, 30);
+        cashier.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new screenCashier();
+            }
+           
+        });
         frame.add(cashier);
         
         manager = new JButton("Manager");

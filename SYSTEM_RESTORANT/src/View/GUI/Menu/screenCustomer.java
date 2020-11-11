@@ -55,24 +55,31 @@ public class screenCustomer {
         });
         frame.add(inputMember);
         
-        JButton managemenStock;
-        managemenStock = new JButton("Management Stock");
-        managemenStock.setBounds(166, 200, 170, 30);
-        managemenStock.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    new screenStock();
-                } catch (IOException ex) {
-                    Logger.getLogger(screenCustomer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }   
-        });
-        frame.add(managemenStock);
+//        JButton managemenStock;
+//        managemenStock = new JButton("Management Stock");
+//        managemenStock.setBounds(166, 200, 170, 30);
+//        managemenStock.addActionListener(new ActionListener(){
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                try {
+//                    new screenStock();
+//                } catch (IOException ex) {
+//                    Logger.getLogger(screenCustomer.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//            }   
+//        });
+//        frame.add(managemenStock);
         
         JButton exit;
         exit = new JButton("Exit");
         exit.setBounds(355, 500, 70, 30);
+        exit.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Screen();
+            }
+            
+        });
         frame.add(exit);
    
         frame.setLayout(null);

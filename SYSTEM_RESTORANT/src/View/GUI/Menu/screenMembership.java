@@ -5,6 +5,9 @@
  */
 package View.GUI.Menu;
 
+import View.GUIMenu.Screen;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -84,8 +87,19 @@ public class screenMembership {
         save = new JButton("Save");
         save.setBounds(355, 500, 70, 30);
         frame.add(save);
-        
-        frame.setSize(500, 700);
+          
+        JButton exit;
+        exit = new JButton("Exit");
+        exit.setBounds(355, 550, 70, 30);
+        exit.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Screen();
+            }
+            
+        });
+        frame.add(exit);
+
         frame.setLayout(null);
         frame.setVisible(true);
     }
